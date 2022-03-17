@@ -3,7 +3,7 @@ const {Schema} = require('mongoose');
 exports.FcsSchema = new Schema({
   id: String,
   currency: String,
-  locale: {type: String, enum: ['LOCL', 'INTL']},
+  isLocal: Boolean,
   entity: {type: String,
     enum: ['CREDIT-CARD', 'DEBIT-CARD', 'BANK-ACCOUNT', 'USSD', 'WALLET-ID']},
   entityProperty: String,

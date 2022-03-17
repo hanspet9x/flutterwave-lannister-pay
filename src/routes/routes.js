@@ -1,3 +1,3 @@
 exports.AppRoutes = {
-  AUTH: '/auth',
+  ADD_FCS: '/fees',
 };

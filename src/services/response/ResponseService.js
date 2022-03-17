@@ -4,8 +4,8 @@ const ResponseService = {
         .json({error: error.message});
   },
 
-  raw(response, data, status) {
-    response.status(status).send(data);
+  json(response, data, status) {
+    response.status(status).json(data);
   },
 };
 
