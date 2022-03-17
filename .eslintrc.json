@@ -12,6 +12,7 @@
     },
     "rules": {
         "linebreak-style":"off",
-        "new-cap":"off"
+        "new-cap":"off",
+        "require-jsdoc": "off"
     }
 }
