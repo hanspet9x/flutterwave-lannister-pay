@@ -8,7 +8,6 @@ class FCSService {
     try {
       // split the fee spec with new line
       const specs = request.FeeConfigurationSpec.split('\n');
-
       if (specs.length) {
         // convert specs to array of schema structure
         const data = specs.map( (spec) => FcsRequestDTO.fees(spec.split(' ')));
