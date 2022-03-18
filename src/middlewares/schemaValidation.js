@@ -6,7 +6,7 @@ exports.schemaValidationMDW = (schema) =>
     const {error} = schema.validate(req.body);
     if (error) {
       ResponseService.sendError(res,
-          ResponseError.get(error.details[0].message, 400));
+          ResponseError.get({message: error.details[0].message}, 400));
       return;
     }
     next();

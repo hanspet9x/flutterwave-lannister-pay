@@ -1,3 +1,5 @@
 exports.AppRoutes = {
-  ADD_FCS: '/fees',
+  FCS: '/fcs',
+  ADD_FEES: '/fees',
+  COMPUTE_FEES: '/compute-transaction-fee',
 };

@@ -7,23 +7,23 @@ exports.FcsSchema = {
   transaction: Joi.object({
     'ID': Joi.number().required(),
     'Amount': Joi.number().required(),
-    'Currency': Joi.string().valid('NGN').required(),
+    'Currency': Joi.string().required(),
     'CurrencyCountry': Joi.string().required(),
-    'Customer': {
-      'ID': 2211232,
+    'Customer': Joi.object({
+      'ID': Joi.number().required(),
       'EmailAddress': Joi.string().required(),
       'FullName': Joi.string().required(),
       'BearsFee': Joi.boolean().required(),
-    },
-    'PaymentEntity': {
+    }),
+    'PaymentEntity': Joi.object({
       'ID': Joi.number().required(),
       'Issuer': Joi.string().required(),
-      'Brand': Joi.string().required(),
+      'Brand': Joi.string().valid(''),
       'Number': Joi.string().required().length(16),
-      'SixID': Joi.number().required().max(6).min(6),
+      'SixID': Joi.string().required().max(6).min(6),
       'Type': Joi.string().required(),
       'Country': Joi.string().required(),
-    },
+    }),
   },
   ),
 };

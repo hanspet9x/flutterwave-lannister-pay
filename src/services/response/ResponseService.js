@@ -1,7 +1,7 @@
 const ResponseService = {
   sendError(response, error) {
     response.status(error.status)
-        .json({error: error.message});
+        .json({Error: error.message});
   },
 
   json(response, data, status) {
