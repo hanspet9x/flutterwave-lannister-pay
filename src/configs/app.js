@@ -1,7 +1,6 @@
 const {getEnv} = require('.');
 exports.AppConfigs = {
   SERVER_PORT: getEnv('SERVER_PORT'),
-  CACHE_TTL: getEnv('CACHE_TTL'),
   ORIGIN: getEnv('CORS_ALLOWED_ORIGINS'),
   APP_ROUTE: getEnv('APP_ROUTE'),
   DATABASE_URL: getEnv('DATABASE_URL'),

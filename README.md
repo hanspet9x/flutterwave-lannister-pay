@@ -2,7 +2,7 @@
 LannisterPay uses a custom fee configuration spec (FCS) to describe applicable fees.
 
 # Base URL
-/v1/api
+/v1/api/fcs
 # Folder Structure
 
 ## __test__
