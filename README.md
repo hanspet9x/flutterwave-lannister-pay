@@ -1,6 +1,7 @@
 # flutterwave-lannister-pay
 LannisterPay uses a custom fee configuration spec (FCS) to describe applicable fees.
-
+## Info
+App relies on .env, rename .env.example
 # Base URL
 /v1/api/fcs
 # Folder Structure
