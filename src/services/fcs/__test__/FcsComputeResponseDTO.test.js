@@ -1,5 +1,5 @@
-const { transactionData1 } = require("../../../../__test__/test_data");
-const { FcsComputeResponseDTO } = require("./../FcsComputeResponseDTO");
+const { transactionData1 } = require("../../../__test__/test_data");
+const { FcsComputeResponseDTO } = require("./../dto/FcsComputeResponseDTO");
 
 describe('FcsComputeRequestDTO', () => {
 

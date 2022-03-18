@@ -1,5 +1,5 @@
-const { feeSpec } = require("../../../../__test__/test_data");
-const { FcsRequestDTO } = require("../FcsRequestDTO");
+const { feeSpec } = require("../../../__test__/test_data");
+const { FcsRequestDTO } = require("../dto/FcsRequestDTO");
 
 describe('FcsRequestDTO', () => {
 

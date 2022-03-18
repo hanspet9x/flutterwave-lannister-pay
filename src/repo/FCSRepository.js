@@ -25,10 +25,13 @@ class FCSRepository {
           {entity: data.entity},
           {entity: '*'},
         ]},
-        {$or: [
+        {
+          property: {$in: data.property},
+        },
+        /*  {$or: [
           {property: data.property},
           {property: '*'},
-        ]},
+        ]}, */
       ],
     }).lean();
   }

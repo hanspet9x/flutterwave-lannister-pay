@@ -1,4 +1,4 @@
-const ResponseError = require('../../response/ResponseError');
+// const ResponseError = require('../../response/ResponseError');
 // Todo: write test
 class FcsComputeRequestDTO {
   static get(transactionPayload) {
@@ -14,7 +14,15 @@ class FcsComputeRequestDTO {
     return data.CurrencyCountry == data.PaymentEntity.Country ? 'LOCL':'INTL';
   }
   static getEntityProperty(data) {
-    switch (data.PaymentEntity.Type) {
+    const payProp = data.PaymentEntity;
+    const props = [];
+    payProp.ID && props.push(payProp.ID);
+    payProp.Brand && props.push(payProp.Brand);
+    payProp.Issuer && props.push(payProp.Issuer);
+    payProp.Number && props.push(payProp.Number);
+    payProp.SixID && props.push(payProp.SixID);
+    return props;
+  /*     switch (data.PaymentEntity.Type) {
       case 'CREDIT-CARD':
       case 'DEBIT-CARD':
         return data.PaymentEntity.Brand || data.PaymentEntity.Issuer;
@@ -26,7 +34,7 @@ class FcsComputeRequestDTO {
         return data.PaymentEntity.SixID;
       default:
         throw ResponseError.get({message: 'invalid Entity'}, 400);
-    }
+    } */
   }
 }
 

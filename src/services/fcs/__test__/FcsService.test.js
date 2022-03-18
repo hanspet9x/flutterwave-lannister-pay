@@ -1,8 +1,8 @@
-const FCSRepository = require('../../../../repo/FCSRepository');
-const { transactionData1, queryResult, transactionData2 } = require('../../../../__test__/test_data');
-const FCSService = require('../../FcsService');
+const FCSRepository = require('../../../repo/FCSRepository');
+const { transactionData1, queryResult, transactionData2 } = require('../../../__test__/test_data');
+const FCSService = require('../FcsService');
 
-require('../../../../__test__/teardown');
+require('../../../__test__/teardown');
 
 describe('Add FCS', () => {
   test('Add fee configuration returns {status: ok}', async () => {
